@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>// By: Brody MacNeil 
+// Made in: December, 2018
+// Makes letter 
+
+
+enum Province : String{
+    case ON
+    case QC
+    case NB
+    case AB
+    case NL
+    case NU
+    case BC
+    case PE
+    case SK
+    case MB
+    case YT
+    case NS
+    case NT
+}
+enum RoadType : String{
+    case Drive
+    case Avenue
+    case Street
+    case Road
+    case Parkway
+}
+struct Road {
+    var firstName: String
+    var lastName: String
+    var houseNumber : Int
+    var street: String
+    var city: String
+    var province: String
+    var postalCode: String
+}
+struct Student {
+    var firstName: String
+    var lastName: String
+    var houseNumber : Int
+    var street: String
+    var street2: RoadType
+    var city: String
+    var province: Province
+    var postalCode: String
+}
+
+let fName = ask("First name")
+let lName = ask("Last name")
+let hNumber: Int = askForNumber("Enter house number")
+let street2 = ask("Enter street number")
+let streetType = ask("Enter road type")
+let streetType2 : RoadType = RoadType(rawValue: streetType)!
+let city2 = ask("Enter city")
+let pronvice = ask("Enter province")
+let province2 : Province = Province(rawValue: pronvice)!
+let postalCode2 = ask("Enter postal code")
+
+let aSingleStudent = Student(firstName: fName, lastName: lName, houseNumber : hNumber, street: street2,street2: RoadType(rawValue: streetType2.rawValue)!, city: city2, province: Province(rawValue: province2.rawValue)!, postalCode: postalCode2)
+
+show("\(aSingleStudent.firstName) \(aSingleStudent.lastName)")
+show("\(aSingleStudent.houseNumber) \(aSingleStudent.street) \(aSingleStudent.street2)")
+show("\(aSingleStudent.city) \(aSingleStudent.province) \(aSingleStudent.postalCode)")
+</string>
+			<key>ModifiedRange</key>
+			<string>{145, 1671}</string>
+			<key>OriginalContent</key>
+			<string>show("What is your name?")
+
+let name = ask("Name")
+
+show("Hi " + name)
+
+</string>
+			<key>OriginalRange</key>
+			<string>{145, 72}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Answers.playgroundchapter/Pages/Text.playgroundpage/Contents.swift</string>
+</dict>
+</plist>
